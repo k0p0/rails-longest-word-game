@@ -1,0 +1,23 @@
+<div class="container text-center">
+
+<h2>Your grid</h2>
+
+<h1> <%= @grid.join(" ") %> </h1>
+
+<h2>What's your best shot?</h2>
+
+
+
+<form action="/score" method="get">
+ <div class="form-group text-center">
+<!-- <%= hidden_field_tag :authenticity_token, form_authenticity_token %> -->
+  <label for="answer">Enter your answer</label>
+  <input type="text" name="answer">
+  <input type="hidden" name="start_time" value="<%= Time.now %>">
+  <input type="hidden" name="grid" value="<%= @grid.join(" ") %>">
+
+  </div>
+  <input type="submit" value="Submit" class="btn btn-primary btn-lg">
+</form>
+
+</div>

@@ -1,0 +1,13 @@
+<div class="container text-center">
+  <i class="fa fa-trophy fa-5x" aria-hidden="true"></i>
+  <p><%= @msg %></p>
+  <h2>Your score :</h2>
+  <h1><%= @score %></h1>
+  <h2>Time taken :</h2>
+  <h3><%= @time %> (seconds)</h3>
+  <h2>The grid :</h2>
+  <h3><%= @grid %></h3>
+  <h2>Your word :</h2>
+  <h3><%= @answer %></h3>
+  <%= link_to "Try again", game_path , class: "btn btn-primary btn-lg"%>
+</div>
